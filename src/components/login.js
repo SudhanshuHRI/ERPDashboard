@@ -27,42 +27,28 @@ const Login = () => {
             toast.error("Please fill all fields !")
         }
         else {
-            try {
-                const formData = new FormData();
-                formData.append("email", userEmail);
-                formData.append("password", userPassword);
+            route.push("/dashboard")
+            // try {
+            //     const formData = new FormData();
+            //     formData.append("email", userEmail);
+            //     formData.append("password", userPassword);
 
-                const resp = await postData("/user/api/findUser", formData);
-                console.log("post data resp", resp);
+            //     const resp = await postData("/user/api/findUser", formData);
+            //     console.log("Login resp", resp);
 
-                if(resp?.data?.msg == "user found"){
-                    toast.success("Login Successful.")
-                    route.push("/dashboard")
-                    localStorage.setItem("ERPtoken",resp?.data?.token)
-                }
-                else{
-                    toast.error("Error !")
-                }
-
-               
-                
-
-            } catch (error) {
-                console.log("try-catch error", error)
-            }
+            //     if(resp?.data?.msg == "user found"){
+            //         toast.success("Login Successful.")
+                    
+            //         localStorage.setItem("ERPtoken",resp?.data?.token)
+            //     }
+            //     else{
+            //         toast.error("Error !")
+            //     }
+            // } catch (error) {
+            //     console.log("try-catch error", error)
+            // }
         }
-
-
-
-
-
-
     }
-
-
-
-
-
     return (
         <div className="p-5 border  " style={{ boxShadow: "0 0 10px lightgray", borderRadius: "20px" }}>
             <Toaster position="top-center" richColors />
