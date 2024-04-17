@@ -1,0 +1,42 @@
+.cardBody > ul{
+    justify-content: space-evenly;
+}
+.sudhTable>div>div>div>div>label{
+    margin-bottom:10px;
+}
+.sudhTable>div>div>div>div>ul{
+    place-content: end;
+}
+.sudhTable table{
+    white-space: nowrap;
+    /* overflow-x: scroll; */
+}
+.contentArea{
+    overflow-x: auto;
+} 
+.totalStudents>td>input{
+    width:100px;
+}
+.totalstud{
+    white-space: nowrap;
+    padding:10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.bgCard{
+    background-image: url("/back5.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mandStar{
+    color:red;
+    font-size: 5px;
+    margin-bottom:10px;
+}
+.breadcrumb-item > a{
+    text-decoration: none;
+}
